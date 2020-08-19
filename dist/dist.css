@@ -1,0 +1,176 @@
+:root {
+  --background-1: #181a1f;
+  --background-2: #181a1f;
+  --foreground-1: #abb2bf;
+  --foreground-2: #abb2bf;
+  --foreground-3: #abb2bf;
+  --highlight-color: #2c313a;
+  --neutral-color: #72767e;
+  --danger-color: #cc241d;
+  --success-color: #458588;
+  --warning-color: #d65d0e;
+  --border-color: #181a1f;
+  /* Footer */
+  --footer-bar-border-top-color: 0;
+  --sn-stylekit-info-color: var(--highlight-color);
+  --sn-stylekit-info-contrast-color: var(--foreground-1);
+  --sn-stylekit-neutral-color: var(--neutral-color);
+  --sn-stylekit-neutral-contrast-color: var(--background-2);
+  --sn-stylekit-success-color: var(--success-color);
+  --sn-stylekit-success-contrast-color: var(--background-2);
+  --sn-stylekit-warning-color: var(--warning-color);
+  --sn-stylekit-warning-contrast-color: var(--background-2);
+  --sn-stylekit-danger-color: var(--danger-color);
+  --sn-stylekit-danger-contrast-color: var(--background-2);
+  --sn-stylekit-shadow-color: var(--background-2);
+  --sn-stylekit-background-color: var(--background-1);
+  --sn-stylekit-foreground-color: var(--foreground-1);
+  --sn-stylekit-border-color: var(--border-color);
+  --sn-stylekit-paragraph-text-color: var(--foreground-1);
+  --sn-stylekit-contrast-background-color: var(--background-2);
+  --sn-stylekit-contrast-foreground-color: var(--foreground-1);
+  --sn-stylekit-contrast-border-color: var(--border-color);
+  --sn-stylekit-secondary-background-color: var(--background-2);
+  --sn-stylekit-secondary-foreground-color: var(--foreground-2);
+  --sn-stylekit-secondary-border-color: var(--border-color);
+  --sn-stylekit-secondary-contrast-background-color: var(--background-1);
+  --sn-stylekit-secondary-contrast-foreground-color: var(--foreground-1);
+  --sn-stylekit-secondary-contrast-border-color: var(--border-color);
+  --sn-stylekit-editor-background-color: var(--background-1);
+  --sn-stylekit-editor-foreground-color: var(--foreground-1);
+  --sn-stylekit-input-placeholder-color: var(--foreground-2);
+  --sn-stylekit-input-border-color: var(--border-color);
+  --sn-stylekit-scrollbar-track-border-color: var(--border-color);
+  --sn-stylekit-scrollbar-thumb-color: var(--sn-stylekit-info-color);
+  --sn-desktop-titlebar-bg-color: var(--background-1);
+  --sn-desktop-titlebar-border-color: var(--border-color);
+  --sn-desktop-titlebar-ui-color: var(--foreground-1);
+  --sn-desktop-titlebar-ui-hover-color: var(--highlight-color);
+  /* Note flags */
+  /* Note selected */
+  /* Sidebar note properties: Dates, tags, etc. */
+  /* Workaround for subitems in Markdown lists not colored using StyleKit */
+  /* Progress bars */
+  /* Text selection color */
+  /* Use lighter blue for Minimal Markdown Editor sublists and other CodeMirror elements */
+}
+
+.CodeMirror, .CodeMirror-fullscreen {
+  font-family: 'SF Mono', Consolas;
+  line-height: 1.5;
+  padding: 20px;
+  top: 0;
+}
+
+.CodeMirror pre.CodeMirror-line, .CodeMirror pre.CodeMirror-line-like {
+  font-size: .9em;
+}
+
+.CodeMirror .cm-header-1, 
+.CodeMirror .cm-header-2, 
+.CodeMirror .cm-header-3, 
+.CodeMirror .cm-header-4, 
+.CodeMirror .cm-header-5, 
+.CodeMirror .cm-header-6 {
+  font-size: 1em;
+} 
+
+.CodeMirror .cm-formatting-header {
+  opacity: 1;
+  font-size: .8 em;
+}
+
+.CodeMirror .cm-header-1 {
+  color: #d55fdeff;
+  border-bottom: 2px solid;
+}
+.CodeMirror .cm-header-2 {
+  color: #e06c75ff;
+  border-bottom: 2px solid;
+}
+.CodeMirror .cm-header-3 {
+  color: #d19a66ff;
+}
+.CodeMirror .cm-header-4 {
+  color: #98c378;
+}
+.CodeMirror .cm-header-5 {
+  color: #aaa;
+}
+.CodeMirror .cm-header-6 {
+  color: #5C6370;
+}
+
+.CodeMirror .cm-link.cm-variable-2, .CodeMirror .cm-url.cm-variable-2,
+.CodeMirror .cm-link, 
+.CodeMirror .cm-string,
+.editor-preview-active a, 
+.editor-preview-active-side a {
+  color: #1d69cc !important;
+  text-decoration: none;
+}
+
+.editor-toolbar,
+.editor-toolbar.fullscreen {
+  height: 1px;
+  opacity: 0;
+}
+
+.editor-toolbar:hover {
+  height: auto;
+  opacity: 1;
+}
+
+.editor-toolbar button {
+  color: var(--neutral-color) !important;
+}
+
+#editor-title-bar {
+  margin-top: 40px;
+  padding-left: 20px;
+}
+
+#editor-title-bar>.title>.input {
+  font-family: 'SF Mono', Consolas;
+  color: #d55fdeff;
+  font-size: 1.5em;
+  /* margin-left: 30px; */
+}
+/* 
+#editor-title-bar>.title:before {
+  font-size: 1.5em;
+  content: '#';
+  position: absolute;
+  margin-left: 4px;
+  margin-top: 1px;
+  color: #d55fdeff;
+} */
+
+.editor-tags {
+  display: none;
+}
+
+#editor-menu-bar {
+  margin-top: -90px;
+}
+
+#footer-bar,
+#editor-menu-bar {
+  opacity: 0;
+}
+
+#footer-bar:hover,
+#editor-menu-bar:hover {
+  opacity: 1;
+}
+
+#notes-column .note, .notes .note {
+  padding: 10px;
+}
+
+#notes-column .note>.name, .notes .note>.name {
+  font-size: .9em;
+  /* white-space: nowrap; */
+}
+
+/*# sourceMappingURL=dist.css.map */
