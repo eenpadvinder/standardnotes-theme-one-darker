@@ -1,6 +1,6 @@
 {
   "name": "standardnotes-theme-one-darker",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "dist/dist.css",
   "sn": {
     "main": "dist/dist.css"
