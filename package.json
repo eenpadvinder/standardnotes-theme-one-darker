@@ -1,0 +1,12 @@
+{
+  "name": "standardnotes-theme-one-darker",
+  "version": "0.2.0",
+  "main": "dist/dist.css",
+  "sn": {
+    "main": "dist/dist.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eenpadvinder/standardnotes-theme-one-darker.git"
+  }
+}
