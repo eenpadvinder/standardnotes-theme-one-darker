@@ -1,24 +1,20 @@
----
-metatype: json
----
-
 {
-  "identifier": "io.github.eenpadvinder.standardnotes-theme",
-  "name": "Theme",
+  "identifier": "io.github.eenpadvinder.standardnotes-theme-one-darker",
+  "name": "One Dark Darker",
   "content_type": "SN|Theme",
   "area": "themes",
-  "version": "v0.1",
+  "version": "v0.2.0",
   "description": "Theme",
-  "url": "https://cdn.jsdelivr.net/gh/eenpadvinder/standardnotes-theme@master/dist/dist.css",
-  "download_url": "https://github.com/eenpadvinder/standardnotes-theme/archive/v0.1.zip",
+  "url": "https://cdn.jsdelivr.net/gh/eenpadvinder/standardnotes-theme-one-darker@master/dist/dist.css",
+  "download_url": "https://github.com/eenpadvinder/standardnotes-theme-one-darker/archive/v0.2.0.zip",
   "latest_url": "https://listed.to/p/VvOLflCGQW",
-  "marketing_url": "https://github.com/eenpadvinder/standardnotes-theme",
+  "marketing_url": "https://github.com/eenpadvinder/standardnotes-theme-one-darker",
   "thumbnail_url": "",
   "dock_icon": {
     "type": "circle",
-    "background_color": "#D79921",
-    "foreground_color": "#076678",
-    "border_color": "#D79921"
+    "background_color": "#181a1f",
+    "foreground_color": "#181a1f",
+    "border_color": "#d55fde"
   },
   "statusBar": "dark-content"
 }

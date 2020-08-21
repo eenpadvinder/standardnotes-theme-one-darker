@@ -1,8 +1,8 @@
 :root {
   --background-1: #181a1f;
   --background-2: #181a1f;
-  --foreground-1: #abb2bf;
-  --foreground-2: #abb2bf;
+  --foreground-1: #aab1c0;
+  --foreground-2: #aab1c0;
   --foreground-3: #abb2bf;
   --highlight-color: #2c313a;
   --neutral-color: #72767e;
@@ -55,24 +55,47 @@
   /* Use lighter blue for Minimal Markdown Editor sublists and other CodeMirror elements */
 }
 
+
+
+.CodeMirror, .CodeMirror-fullscreen, .gKsMQS, .gKsMQS p, .CodeMirror pre.CodeMirror-line, .CodeMirror pre.CodeMirror-line-like  {
+  font-family: "SF Mono",Monaco,Menlo,Courier,monospace;
+  line-height: 20px;
+  font-feature-settings: "liga" 0, "calt" 0;
+  letter-spacing: 0px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
 .CodeMirror, .CodeMirror-fullscreen {
-  font-family: 'SF Mono', Consolas;
-  line-height: 1.5;
-  padding: 20px;
+  padding: 0;
   top: 0;
 }
 
-.CodeMirror pre.CodeMirror-line, .CodeMirror pre.CodeMirror-line-like {
-  font-size: .9em;
+.editor-preview {
+  top: 0;
+  padding: 20px;
 }
 
-.CodeMirror .cm-header-1, 
-.CodeMirror .cm-header-2, 
-.CodeMirror .cm-header-3, 
-.CodeMirror .cm-header-4, 
-.CodeMirror .cm-header-5, 
-.CodeMirror .cm-header-6 {
-  font-size: 1em;
+.CodeMirror-lines {
+  padding: 40px 60px;
+}
+
+.gKsMQS h1:not(.placeholder)::before, 
+.gKsMQS h2:not(.placeholder)::before, 
+.gKsMQS h3:not(.placeholder)::before, 
+.gKsMQS h4:not(.placeholder)::before, 
+.gKsMQS h5:not(.placeholder)::before, 
+.gKsMQS h6:not(.placeholder)::before {
+  display: none;
+} 
+
+.CodeMirror .cm-header-1, .gKsMQS h1, 
+.CodeMirror .cm-header-2, .gKsMQS h2,
+.CodeMirror .cm-header-3, .gKsMQS h3,
+.CodeMirror .cm-header-4, .gKsMQS h4,
+.CodeMirror .cm-header-5, .gKsMQS h5,
+.CodeMirror .cm-header-6  .gKsMQS h6 {
+  font-size: 14px;
 } 
 
 .CodeMirror .cm-formatting-header {
@@ -80,24 +103,26 @@
   font-size: .8 em;
 }
 
-.CodeMirror .cm-header-1 {
+.CodeMirror .cm-header-1, .gKsMQS h1 span {
   color: #d55fdeff;
-  border-bottom: 2px solid;
+  font-size: 26px;
+  font-weight: bold;
 }
-.CodeMirror .cm-header-2 {
+.CodeMirror .cm-header-2, .gKsMQS h2 span {
   color: #e06c75ff;
   border-bottom: 2px solid;
 }
-.CodeMirror .cm-header-3 {
+.CodeMirror .cm-header-3, .gKsMQS h3 span {
   color: #d19a66ff;
+  border-bottom: 2px solid;
 }
-.CodeMirror .cm-header-4 {
+.CodeMirror .cm-header-4, .gKsMQS h4 span {
   color: #98c378;
 }
-.CodeMirror .cm-header-5 {
+.CodeMirror .cm-header-5, .gKsMQS h5 span {
   color: #aaa;
 }
-.CodeMirror .cm-header-6 {
+.CodeMirror .cm-header-6, .gKsMQS h6 span {
   color: #5C6370;
 }
 
@@ -105,7 +130,8 @@
 .CodeMirror .cm-link, 
 .CodeMirror .cm-string,
 .editor-preview-active a, 
-.editor-preview-active-side a {
+.editor-preview-active-side a,
+.gKsMQS a {
   color: #1d69cc !important;
   text-decoration: none;
 }
@@ -114,10 +140,11 @@
 .editor-toolbar.fullscreen {
   height: 1px;
   opacity: 0;
+  padding-top: 0;
 }
 
 .editor-toolbar:hover {
-  height: auto;
+  height: 50px;
   opacity: 1;
 }
 
@@ -126,51 +153,74 @@
 }
 
 #editor-title-bar {
-  margin-top: 40px;
-  padding-left: 20px;
+  margin-top: 0px;
+  margin-left: -5px;
+  padding-bottom: 0;
+  width: 50%;
 }
 
 #editor-title-bar>.title>.input {
-  font-family: 'SF Mono', Consolas;
-  color: #d55fdeff;
-  font-size: 1.5em;
-  /* margin-left: 30px; */
+  /* font-family: 'SF Mono', Consolas; */
+  color: var(--neutral-color);
+  font-size: 14px;
 }
-/* 
-#editor-title-bar>.title:before {
-  font-size: 1.5em;
-  content: '#';
-  position: absolute;
-  margin-left: 4px;
-  margin-top: 1px;
-  color: #d55fdeff;
-} */
 
-.editor-tags {
+#editor-title-bar #save-status {
+  top: 50px;
   display: none;
 }
 
-#editor-menu-bar {
-  margin-top: -90px;
+.editor-tags {
+  opacity: 0
 }
 
-#footer-bar,
-#editor-menu-bar {
-  opacity: 0;
+.editor-tags:hover {
+  opacity: 1;
 }
 
-#footer-bar:hover,
-#editor-menu-bar:hover {
+.sk-panel, .sk-menu-panel {
+  box-shadow: 2px 2px 4px 2px rgba(15, 15, 15, 0.363) !important; 
+}
+
+#editor-menu-bar {
+  margin-top: -55px;
+  padding-left: 10px;
+  padding-right: 20px;
+  opacity: 0.2;
+  flex-direction: row-reverse;
+}
+
+#editor-menu-bar .left, .sn-component .sk-app-bar .left {
+  align-items: right;
+  justify-content: right;
+}
+
+#editor-menu-bar:hover,
+#editor-menu-bar:active,
+#editor-menu-bar:focus {
   opacity: 1;
 }
 
 #notes-column .note, .notes .note {
-  padding: 10px;
+  padding: 6px 10px;
 }
 
 #notes-column .note>.name, .notes .note>.name {
-  font-size: .9em;
-  /* white-space: nowrap; */
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'SF Pro Display',sans-serif;
+  white-space: nowrap;
 }
 
-/*# sourceMappingURL=dist.css.map */
+.app .section .scrollable {
+  overflow-y: hidden;
+}
+
+#notes-column .infinite-scroll, .notes .infinite-scroll>div:last-child {
+  height: 1000px;
+}
+
+.dropdown-menu {
+  right: 0;
+  left: unset;
+}
